@@ -1,0 +1,36 @@
+/* Base GitHub-like typography */
+@import "github-markdown-css/github-markdown.css";
+
+/* Light theme for code blocks */
+@import "highlight.js/styles/github.css";
+
+/* Auto dark theme for code blocks */
+@media (prefers-color-scheme: dark) {
+  @import "highlight.js/styles/github-dark.css";
+}
+
+/* Optional: nicer code block padding and rounded corners */
+.markdown-body pre code {
+  border-radius: 8px;
+  display: block;
+  padding: 1rem;
+}
+
+/* Keep images responsive */
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make the markdown container match the page background */
+.markdown-body {
+  background-color: transparent !important; /* override github-markdown-css */
+  color: inherit;                            /* inherit page text color */
+}
+
+/* Optional: if you also want code blocks to match page bg (remove if you like the contrast) */
+.markdown-body pre,
+.markdown-body code,
+.markdown-body pre code {
+  background-color: inherit !important;
+}
