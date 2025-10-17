@@ -42,3 +42,36 @@
   display: block;
   margin: 0 auto;
 }
+
+/* Strong override for tables inside markdown-body */
+.markdown-body table,
+.markdown-body table thead,
+.markdown-body table tbody,
+.markdown-body table tr,
+.markdown-body table th,
+.markdown-body table td {
+  background-color: transparent !important;
+  color: inherit !important;
+  border-color: currentColor !important;
+}
+
+/* Remove any background on cells or header rows */
+.markdown-body table th,
+.markdown-body table td {
+  background-color: transparent !important;
+}
+
+/* If there are striped row backgrounds (even rows) */
+.markdown-body table tr:nth-child(even) th,
+.markdown-body table tr:nth-child(even) td {
+  background-color: transparent !important;
+}
+
+/* If dark mode has special backgrounds */
+@media (prefers-color-scheme: dark) {
+  .markdown-body table,
+  .markdown-body table th,
+  .markdown-body table td {
+    background-color: transparent !important;
+  }
+}
