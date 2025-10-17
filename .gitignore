@@ -1,3 +1,6 @@
+/posts/*
+!/posts/hello-world/
+
 # Logs
 logs
 *.log

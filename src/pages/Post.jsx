@@ -12,7 +12,14 @@ export default function Post() {
 
     return (
         <article className="markdown-body">
-        <h2 style={{ marginTop: 0 }}>{post.title}</h2>
+        <h2 style={{
+                marginTop: 0,
+                fontSize: "3rem",
+                textAlign: "center",
+                borderBottom: "none"
+            }}>
+            {post.title}
+        </h2>
         <ReactMarkdown 
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[[rehypeHighlight, { ignoreMissing: true }]]}>
