@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import "./styles/markdown.css";
+import config from "../md-portal-config";
 
 
 export default function App() {
@@ -24,7 +25,7 @@ export default function App() {
                               fontWeight: 700,
                               fontSize: "1.25rem",
                             }}>
-          My Blog
+          {config.site_name}
         </Link>
       </header>
       <Routes>
