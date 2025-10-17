@@ -26,6 +26,9 @@
 .markdown-body {
   background-color: transparent !important; /* override github-markdown-css */
   color: inherit;                            /* inherit page text color */
+  max-width: min(90vw, 800px);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Optional: if you also want code blocks to match page bg (remove if you like the contrast) */
